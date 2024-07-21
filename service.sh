@@ -1,6 +1,8 @@
 #!/system/bin/sh
 # force twitter use system fonts
-chown shell:shell guo-rw /data/data/com.twitter.android/files
+chown shell:shell /data/data/com.twitter.android/files
+chmod guo-rwx /data/data/com.twitter.android/files
+chmod gu+r /data/data/com.twitter.android/files
 
 # ╭────────────────────────────────────────────╮
 # │     Kill GMS Font Module. | @MrCarb0n      │
