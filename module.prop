@@ -1,6 +1,6 @@
-id=custom-fonts
-name=Custom Android Default Fonts
+id=customize-android
+name=自定义Android
 version=1.0
 versionCode=1
-author=r6kv1p
-description=Custom Android default fonts
+author=郭凯斌
+description=Android全局使用定制字体；Android 6启动动画；定时清理垃圾文件；禁用OEM加密（允许播放DRM保护内容）
