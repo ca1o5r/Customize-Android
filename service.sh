@@ -3,12 +3,19 @@ until [ "$(resetprop sys.boot_completed)" = "1" -a -d "/data" ]; do
     sleep 5
 done
 
-sleep 30
+sleep 60
 
 mount -o bind "/sdcard/Images" "/sdcard/Pictures"
 mount -o bind "/sdcard/Backups" "/sdcard/Download"
 mount -o bind "/sdcard/Audios" "/sdcard/Music"
 mount -o bind "/sdcard/Videos/Movies" "/sdcard/Movies"
+
+chown shell:shell /data/data/com.twitter.android/files
+chmod guo-rwx /data/data/com.twitter.android/files
+chown shell:shell /data/data/cmb.pb/files/fontResource
+chmod guo-rwx /data/data/cmb.pb/files/fontResource
+chown shell:shell /data/data/com.xiaomi.smarthome/files/dynamic_fonts
+chmod guo-rwx /data/data/com.xiaomi.smarthome/files/dynamic_fonts
 
 while true
 do
@@ -43,13 +50,6 @@ do
     rm -rf /sdcard/.UTSystemConfig
     rm -rf /sdcard/msc
     rm -rf /sdcard/tencent
-    
-    su -c "chown shell:shell /data/data/com.twitter.android/files"
-    su -c "chmod guo-rwx /data/data/com.twitter.android/files"
-    su -c "chown shell:shell /data/data/cmb.pb/files/fontResource"
-    su -c "chmod guo-rwx /data/data/cmb.pb/files/fontResource"
-    su -c "chown shell:shell /data/data/com.xiaomi.smarthome/files/dynamic_fonts"
-    su -c "chmod guo-rwx /data/data/com.xiaomi.smarthome/files/dynamic_fonts"
     
     STATE_GMSF() {
         PM="$(command -v pm)"
