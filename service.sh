@@ -1,11 +1,17 @@
 
+until [ "$(resetprop sys.boot_completed)" = "1" -a -d "/data" ]; do
+    sleep 5
+done
+
+sleep 30
+
+mount -o bind "/sdcard/Images" "/sdcard/Pictures"
+mount -o bind "/sdcard/Backups" "/sdcard/Download"
+mount -o bind "/sdcard/Audios" "/sdcard/Music"
+mount -o bind "/sdcard/Videos/Movies" "/sdcard/Movies"
+
 while true
 do
-
-    until [ "$(resetprop sys.boot_completed)" = "1" -a -d "/data" ]; do
-        sleep 5
-    done
-    
     rm -rf /sdcard/Pictures/.gs*
     rm -rf /sdcard/Pictures/.thumb*
     rm -rf /sdcard/Pictures/WeChat
@@ -17,7 +23,7 @@ do
     rm -rf /sdcard/DCIM/.tmfs
     rm -rf /sdcard/DCIM/.android
     rm -rf /sdcard/DCIM/.yz
-    rm -rf /sdcard/Movies
+    rm -rf /sdcard/Movies/.thumb*
     rm -rf /sdcard/Android/media
     rm -rf /sdcard/Android/.vy
     rm -rf /sdcard/Android/obb
