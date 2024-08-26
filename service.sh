@@ -5,10 +5,15 @@ done
 
 sleep 60
 
-mount -o bind "/sdcard/Images" "/sdcard/Pictures"
-mount -o bind "/sdcard/Backups" "/sdcard/Download"
-mount -o bind "/sdcard/Audios" "/sdcard/Music"
-mount -o bind "/sdcard/Videos/Movies" "/sdcard/Movies"
+rm -rf /sdcard/Images/*
+rm -rf /sdcard/Backups/*
+rm -rf /sdcard/Audios/*
+rm -rf /sdcard/Videos/Movies/*
+
+mount -o bind "/sdcard/Pictures" "/sdcard/Images"
+mount -o bind "/sdcard/Download" "/sdcard/Backups"
+mount -o bind "/sdcard/Music" "/sdcard/Audios"
+mount -o bind "/sdcard/Movies" "/sdcard/Videos/Movies"
 
 chown shell:shell /data/data/com.twitter.android/files
 chmod guo-rwx /data/data/com.twitter.android/files
