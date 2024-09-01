@@ -31,6 +31,9 @@ do
     rm -rf /sdcard/Pictures/CloudHub
     rm -rf /sdcard/Pictures/Douban
     rm -rf /sdcard/Pictures/weibo*
+    rm -rf /sdcard/Pictures/.stx
+    rm -rf /sdcard/Images/.stx
+    rm -rf /sdcard/Images/.jdimage
     rm -rf /sdcard/Music/.thumb*
     rm -rf /sdcard/DCIM/.tmfs
     rm -rf /sdcard/DCIM/.android
