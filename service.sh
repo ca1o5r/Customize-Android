@@ -9,7 +9,6 @@ rm -rf /sdcard/Images/*
 rm -rf /sdcard/Backups/*
 rm -rf /sdcard/Audios/*
 rm -rf /sdcard/Videos/Movies/*
-
 mount -o bind "/sdcard/Pictures" "/sdcard/Images"
 mount -o bind "/sdcard/Download" "/sdcard/Backups"
 mount -o bind "/sdcard/Music" "/sdcard/Audios"
@@ -32,13 +31,14 @@ do
     rm -rf /sdcard/Pictures/Douban
     rm -rf /sdcard/Pictures/weibo*
     rm -rf /sdcard/Pictures/.stx
+    rm -rf /sdcard/Images/jdimage
     rm -rf /sdcard/Images/.stx
-    rm -rf /sdcard/Images/.jdimage
     rm -rf /sdcard/Music/.thumb*
     rm -rf /sdcard/DCIM/.tmfs
     rm -rf /sdcard/DCIM/.android
     rm -rf /sdcard/DCIM/.yz
     rm -rf /sdcard/Movies/.thumb*
+    rm -rf /sdcard/Movies/weiboIntl_video
     rm -rf /sdcard/Android/media
     rm -rf /sdcard/Android/.vy
     rm -rf /sdcard/Android/obb
@@ -46,8 +46,8 @@ do
     rm -rf /sdcard/Android/.data
     rm -rf /sdcard/Android/data/.nomedia
     rm -rf /sdcard/Documents/.thumb*
-    rm -rf /sdcard/Download/.thumb*
-    rm -rf /sdcard/Download/.tistore*
+    rm -rf /sdcard/Documents/.*.obb
+    rm -rf /sdcard/Download/.*
     rm -rf /sdcard/Download/Nearby*
     rm -rf /sdcard/Download/netease*
     rm -rf /sdcard/YZJLog
