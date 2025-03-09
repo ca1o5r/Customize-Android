@@ -5,19 +5,13 @@ done
 
 sleep 60
 
-rm -rf /sdcard/Images/*
-rm -rf /sdcard/Backups/*
-rm -rf /sdcard/Audios/*
-rm -rf /sdcard/Videos/Movies/*
-mount -o bind "/sdcard/Pictures" "/sdcard/Images"
-mount -o bind "/sdcard/Download" "/sdcard/Backups"
-mount -o bind "/sdcard/Music" "/sdcard/Audios"
-mount -o bind "/sdcard/Movies" "/sdcard/Videos/Movies"
+
+chown shell:shell /data/data/cmb.pb/files/fontResource
+chmod guo-rwx /data/data/cmb.pb/files/fontResource
 
 chown shell:shell /data/data/com.twitter.android/files
 chmod guo-rwx /data/data/com.twitter.android/files
-chown shell:shell /data/data/cmb.pb/files/fontResource
-chmod guo-rwx /data/data/cmb.pb/files/fontResource
+
 chown shell:shell /data/data/com.xiaomi.smarthome/files/dynamic_fonts
 chmod guo-rwx /data/data/com.xiaomi.smarthome/files/dynamic_fonts
 
@@ -47,15 +41,20 @@ do
     rm -rf /sdcard/Android/data/.nomedia
     rm -rf /sdcard/Documents/.thumb*
     rm -rf /sdcard/Documents/.*.obb
-    rm -rf /sdcard/Download/.*
     rm -rf /sdcard/Download/Nearby*
     rm -rf /sdcard/Download/netease*
+    rm -rf /sdcard/Download/.td*
+    rm -rf /sdcard/Download/.tistore
+    rm -rf /sdcard/Download/.thumb*
+    rm -rf /sdcard/Download/.adiu
+    rm -rf /sdcard/Download/.exmu-cfg1.data
     rm -rf /sdcard/YZJLog
     rm -rf /sdcard/.yzj_id
     rm -rf /sdcard/.vivo
     rm -rf /sdcard/.gs_fs0
     rm -rf /sdcard/.DataStorage
     rm -rf /sdcard/.UTSystemConfig
+    rm -rf /sdcard/.picker_transcoded
     rm -rf /sdcard/msc
     rm -rf /sdcard/tencent
     
