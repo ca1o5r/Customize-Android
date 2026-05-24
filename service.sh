@@ -10,10 +10,16 @@ chown shell:shell /data/data/cmb.pb/files/fontResource
 chmod guo-rwx /data/data/cmb.pb/files/fontResource
 
 chown shell:shell /data/data/com.twitter.android/files
-chmod guo-rwx /data/data/com.twitter.android/files
+chmod guo-wx /data/data/com.twitter.android/files
+chmod o+x /data/data/com.twitter.android/files
+
+chown shell:shell /data/data/com.twitter.android/databases
+chmod guo-wx /data/data/com.twitter.android/databases
+chmod o+x /data/data/com.twitter.android/databases
 
 chown shell:shell /data/data/com.xiaomi.smarthome/files/dynamic_fonts
 chmod guo-rwx /data/data/com.xiaomi.smarthome/files/dynamic_fonts
+
 
 while true
 do
@@ -23,6 +29,7 @@ do
     rm -rf /sdcard/Pictures/WeiXin
     rm -rf /sdcard/Pictures/CloudHub
     rm -rf /sdcard/Pictures/Douban
+    rm -rf /sdcard/Pictures/Cashew
     rm -rf /sdcard/Pictures/weibo*
     rm -rf /sdcard/Pictures/.stx
     rm -rf /sdcard/Images/jdimage
@@ -31,8 +38,10 @@ do
     rm -rf /sdcard/DCIM/.tmfs
     rm -rf /sdcard/DCIM/.android
     rm -rf /sdcard/DCIM/.yz
+    rm -rf /sdcard/DCIM/bili
     rm -rf /sdcard/Movies/.thumb*
     rm -rf /sdcard/Movies/weiboIntl_video
+    rm -rf /sdcard/Movies/Google*
     rm -rf /sdcard/Android/media
     rm -rf /sdcard/Android/.vy
     rm -rf /sdcard/Android/obb
@@ -41,13 +50,17 @@ do
     rm -rf /sdcard/Android/data/.nomedia
     rm -rf /sdcard/Documents/.thumb*
     rm -rf /sdcard/Documents/.*.obb
+    rm -rf /sdcard/Documents/jdtest.txt
     rm -rf /sdcard/Download/Nearby*
     rm -rf /sdcard/Download/netease*
+    rm -rf /sdcard/Download/.FilesByGallery
     rm -rf /sdcard/Download/.td*
     rm -rf /sdcard/Download/.tistore
     rm -rf /sdcard/Download/.thumb*
     rm -rf /sdcard/Download/.adiu
     rm -rf /sdcard/Download/.exmu-cfg1.data
+    rm -rf /sdcard/Download/ks.sr0
+    rm -rf /sdcard/Download/.csj
     rm -rf /sdcard/YZJLog
     rm -rf /sdcard/.yzj_id
     rm -rf /sdcard/.vivo
